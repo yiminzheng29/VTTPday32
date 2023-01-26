@@ -1,0 +1,17 @@
+<h1>List of Items</h1>
+
+
+
+<ul *ngFor="let itm of itemList">
+    <li ><button type="button" (click)="onItemClick(itm)">{{itm.name}}</button></li>
+    <!-- <li ><button type="button" (click)="onItemClick($event)" value={{itm.name}}>{{itm.name}}</button></li> -->
+    <!-- <li (click)="onItemClick(itm)">{{itm.name}}</li> -->
+</ul>
+
+
+
+<div *ngIf="selectedItems">
+    <h3>You have selected the item {{selectedItems.name}}.</h3>
+    <!-- <h3>You have selected the item {{selectedItems}}.</h3> -->
+
+</div>
